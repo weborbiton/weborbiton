@@ -1,16 +1,84 @@
-## Hi there 👋
+# WebOrbiton ⚡  
+**Open Source Status Monitoring — fast, lightweight, and built for everyone**
 
-<!--
-**weborbiton/weborbiton** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+WebOrbiton is a modern, ultra-fast, and lightweight status monitoring system.  
+No VPS required — it runs entirely on pure PHP + Cron Jobs, making it perfect for any shared hosting environment.
 
-Here are some ideas to get you started:
+Monitor all your websites and services in real time.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🚀 Features
+
+### ⚡ Lightning Fast  
+Minimal resource usage. WebOrbiton runs with:
+- **Pure PHP**
+- **Cron Jobs only**
+- **No heavy dependencies**
+- **Footprint under 300KB**
+
+### 🟢 Real-Time Monitoring  
+- Live uptime tracking  
+- Instant incident detection  
+- Unlimited number of monitored services  
+
+### 🔒 100% Open Source  
+Fully transparent and free.  
+Self-host or use our upcoming cloud version.  
+Fork, modify, and deploy exactly as you need.
+
+### Made in Poland  
+Built by developers who care about performance, privacy, and simplicity.  
+EU-first approach in design and security.
+
+### 🛠️ Easy Setup  
+Just upload the files, configure your services, and you're ready to monitor.  
+No complicated deployment steps.
+
+### 🚨 Incident Management  
+Track:
+- Downtime  
+- Maintenance windows  
+- Service interruptions  
+
+Get alerts when your services go offline.
+
+### 🧱 Built for Performance  
+- **PHP 7.4+ — works everywhere**  
+- **No external libraries**  
+- **Cron-only architecture**  
+- **Proven 99.8% uptime**  
+
+---
+
+## 💵 Simple Pricing
+
+### **Self-Hosted — Free Forever**
+- Unlimited services  
+- Real-time monitoring  
+- Full source code  
+- Community support  
+- Self-managed
+
+---
+
+## 🧰 Minimal Tech Stack  
+Everything you need. Nothing you don’t.
+
+- PHP 7.4+  
+- MySQL / SQLite  
+- Cron Jobs  
+- REST API  
+- JSON  
+- HTML / CSS  
+
+---
+
+## 🚀 Get Started  
+Download WebOrbiton and start monitoring your services in minutes.
+
+---
+
+© 2025 WebOrbiton — Open Source & Free
+GNU GENERAL PUBLIC LICENSE
+Made with love in Poland
