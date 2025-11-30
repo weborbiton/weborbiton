@@ -1,0 +1,19 @@
+=======================================================
+WebOrbiton Team – Favicon License
+=======================================================
+
+File: favicon.ico
+Date: 2025-11-30
+Project: WebOrbiton Status Page
+
+The favicon included in this project is created and owned by the WebOrbiton Team (WebOrbiton.click).
+
+This favicon is provided for example purposes only. 
+You have full rights to use it within your local/project development environment.
+
+IMPORTANT:
+- The favicon is **not allowed** to be redistributed or published publicly.
+- It cannot be used in other public projects, websites, or distributions without explicit permission from WebOrbiton Team.
+
+For inquiries or licensing questions, contact: info@weborbiton.click
+=======================================================

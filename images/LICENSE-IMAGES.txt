@@ -1,0 +1,20 @@
+=======================================================
+WebOrbiton Team – Image License (CC0 / Public Domain)
+=======================================================
+
+Folder: images/
+Date: 2025-11-30
+Project: WebOrbiton Status Page
+
+All default images in this folder (including but not limited to up.png, down.png, degraded.png, and any other provided image files) 
+are created and authored by the WebOrbiton Team.
+
+These images are dedicated to the public domain under the Creative Commons CC0 1.0 Universal License.
+You may use, copy, modify, distribute, and perform the work, even for commercial purposes, without asking permission.
+
+Attribution is optional.
+
+This license applies to all default images included in the WebOrbiton Status Page project.
+
+For more information, see: https://creativecommons.org/publicdomain/zero/1.0/
+=======================================================
