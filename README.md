@@ -1,5 +1,5 @@
 # WebOrbiton ⚡  
-**Open Source Status Monitoring — fast, lightweight, and built for everyone**
+**Status Monitoring — fast, lightweight, and built for everyone**
 
 WebOrbiton is a modern, ultra-fast, and lightweight status monitoring system.  
 No VPS required — it runs entirely on pure PHP + Cron Jobs, making it perfect for any shared hosting environment.
@@ -21,11 +21,6 @@ Minimal resource usage. WebOrbiton runs with:
 - Live uptime tracking  
 - Instant incident detection  
 - Unlimited number of monitored services  
-
-### 🔒 100% Open Source  
-Fully transparent and free.  
-Self-host or use our upcoming cloud version.  
-Fork, modify, and deploy exactly as you need.
 
 ### Made in Poland  
 Built by developers who care about performance, privacy, and simplicity.  
@@ -51,14 +46,11 @@ Get alerts when your services go offline.
 
 ---
 
-## 💵 Simple Pricing
+## 💵 Pricing & License
 
-### **Self-Hosted — Free Forever**
-- Unlimited services  
-- Real-time monitoring  
-- Full source code  
-- Community support  
-- Self-managed
+WebOrbiton is **licensed software**. By using WebOrbiton, you agree to the terms of the license.  
+
+For full license details, see [`LICENSE.md`](LICENSE.md).
 
 ---
 
@@ -79,6 +71,5 @@ Download WebOrbiton and start monitoring your services in minutes.
 
 ---
 
-© 2025 WebOrbiton — Open Source & Free
-GNU GENERAL PUBLIC LICENSE
+© 2025 WebOrbiton — Licensed Software  
 Made with love in Poland
