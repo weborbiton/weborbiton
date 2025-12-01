@@ -50,7 +50,7 @@ Get alerts when your services go offline.
 
 WebOrbiton is **licensed software**. By using WebOrbiton, you agree to the terms of the license.  
 
-For full license details, see [`LICENSE.md`](LICENSE.md).
+For full license details, see [`LICENSE`](LICENSE).
 
 ---
 
