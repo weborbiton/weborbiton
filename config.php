@@ -4,9 +4,9 @@
 // ==============================
 
 // General site information
-$siteName = "MevaSearch";       // Name of the website/project
+$siteName = "Example";       // Name of the website/project
 $siteStatus = "Status Monitor"; // Title used in status monitoring pages
-$siteLogoText = "M";            // Short text/logo to display in header or favicon
+$siteLogoText = "E";            // Short text/logo to display in header or favicon
 
 // ==============================
 // SEO TEMPLATES
