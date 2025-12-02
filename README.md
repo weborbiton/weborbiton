@@ -12,9 +12,8 @@ Monitor all your websites and services in real time.
 
 ### ⚡ Lightning Fast  
 Minimal resource usage. WebOrbiton runs with:
-- **Pure PHP**
-- **Cron Jobs only**
-- **No heavy dependencies**
+- **PHP**
+- **Cron Jobs**
 - **Footprint under 300KB**
 
 ### 🟢 Real-Time Monitoring  
@@ -32,16 +31,15 @@ No complicated deployment steps.
 
 ### 🚨 Incident Management  
 Track:
+- Uptime
 - Downtime  
-- Maintenance windows  
-- Service interruptions  
+- Maintenance
 
 Get alerts when your services go offline.
 
 ### 🧱 Built for Performance  
-- **PHP 7.4+ — works everywhere**  
-- **No external libraries**  
-- **Cron-only architecture**  
+- **PHP 7.4+ — works everywhere**   
+- **Cron architecture**  
 - **Proven 99.8% uptime**  
 
 ---
@@ -58,7 +56,6 @@ For full license details, see [`LICENSE`](LICENSE).
 Everything you need. Nothing you don’t.
 
 - PHP 7.4+  
-- MySQL / SQLite  
 - Cron Jobs  
 - REST API  
 - JSON  
