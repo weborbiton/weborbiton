@@ -6,10 +6,12 @@ Date: 2025.12.01
 1. GENERAL PROVISIONS AND COPYRIGHT
 ====================================================================
 
-The WebOrbiton software (“Software”) is provided as "source available" 
-and is subject to the terms of this License. All copyrights to the 
-Software (PHP, JS, HTML, CSS, configurations, and other elements), unless 
-otherwise stated, belong to the WebOrbiton Team (“Licensor”).
+The WebOrbiton software (“Software”) is provided as "source available"
+and is subject to the terms of this License. All copyrights to the
+Software (PHP, JS, HTML, CSS, configurations, and other elements),
+excluding any third-party libraries or components used,
+which are subject to their own respective licenses,
+belong to the WebOrbiton Team (“Licensor”).
 
 Definitions:
 - Licensee: any person or entity using the Software.
@@ -108,7 +110,7 @@ automatically loses all rights to use the Software without notice.
 
 All disputes arising from this License will be governed by the law of 
 the Republic of Poland and subject to the exclusive jurisdiction of the 
-common courts in [LICENSEE’S CITY OF SEAT].
+common courts.
 
 ====================================================================
 7. LICENSE VERSIONS AND FINAL PROVISIONS
