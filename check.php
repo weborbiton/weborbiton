@@ -1,3 +1,7 @@
+<!-- ==============================
+    NOTE: Change the filename to a harder-to-guess one using (a-z, A-Z, 1-9). Not required, but recommended by WebOrbiton.
+============================== -->
+
 <?php
 /**
  * Website Status Monitoring Script
@@ -23,6 +27,9 @@
 
 // === CONFIG ===
 $sites_data = include 'sites.php'; // array of sites with 'name' and 'url'
+
+// Include alert script on each run. Remove to disable alerts.
+include __DIR__ . '/alert.php'; // Change the filename to a harder-to-guess one using (a-z, A-Z, 1-9). Not required, but recommended by WebOrbiton.
 
 $file = __DIR__ . "/status.json";  // file to store monitoring history
 $maxHours = 3;       // keep only last X hours of minute data

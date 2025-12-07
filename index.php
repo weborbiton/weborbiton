@@ -16,6 +16,15 @@
 require_once 'config.php';      // Load site and SEO configuration
 $sites_data = include 'sites.php';      // Load monitored sites
 
+// ==============================
+// Developer Info Card Loader
+// ==============================
+// Loads the developer info card from based-info.php only if the URL contains ?using-info=true
+// NOTE: This info is optional and can be completely disabled by removing or commenting out this line.
+if (isset($_GET['using-info']) && $_GET['using-info'] === 'true') {
+    include 'based-info.php';
+}
+
 header('Content-Type: text/html; charset=utf-8');
 
 // ==============================
@@ -34,10 +43,10 @@ $statusData = file_exists('status.json') ? json_decode(file_get_contents('status
 // Detect latest status per site (for display or 503 detection)
 // ==============================
 foreach ($sites_data as $site) {
-    $siteName = $site['name'];
-    $siteUrl = $site['url'];
+    $websiteName = $site['name'];
+    $websiteUrl = $site['url'];
     
-    $entries = isset($statusData[$siteName]) ? $statusData[$siteName] : [];
+    $entries = isset($statusData[$websiteName]) ? $statusData[$websiteName] : [];
     ksort($entries); // sort by timestamp
 
     $latest = end($entries) ?: 'unknown'; // last known status
@@ -166,7 +175,7 @@ foreach ($statusData as $site => $entries) {
                     <span class="status-badge $statusClass">$statusBadge</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Site operational checks (every 2 min)</span>
+                    <span class="stat-label">Site operational checks (every $checkRate)</span>
                     <span class="stat-value">$upCount</span>
                 </div>
                 <div class="stat-row">
@@ -238,10 +247,10 @@ $seoTitle = sprintf($seoTitleTemplate, $overallStatus);
     <meta property="og:description" content="<?php echo htmlspecialchars($seoDescription); ?>">
     <meta property="og:type" content="website">
     <meta property="og:url"
-        content="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? " https" : "http"
+        content="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http"
         ) . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>">
     <meta property="og:image"
-        content="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? " https" : "http"
+        content="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http"
         ) . "://" . $_SERVER['HTTP_HOST'] . $statusImage); ?>">
     <meta property="og:image:alt" content="<?= $siteName . ' is ' . strtolower($overallStatus) ?>">
 
@@ -253,7 +262,7 @@ $seoTitle = sprintf($seoTitleTemplate, $overallStatus);
     <meta name="twitter:title" content="<?php echo htmlspecialchars($seoTitle); ?>">
     <meta name="twitter:description" content="<?php echo htmlspecialchars($seoDescription); ?>">
     <meta name="twitter:image"
-        content="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? " https" : "http"
+        content="<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http"
         ) . "://" . $_SERVER['HTTP_HOST'] . $statusImage); ?>">
 
     <!-- ==============================
@@ -262,31 +271,31 @@ $seoTitle = sprintf($seoTitleTemplate, $overallStatus);
          Dynamic: uses current status, publisher, last modified date
     ============================== -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "<?php echo htmlspecialchars($seoTitle); ?>",
-    "description": "<?php echo htmlspecialchars($seoDescription); ?>",
-    "url": "<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>",
-    "publisher": {
-      "@type": "Organization",
-      "name": "<?php echo htmlspecialchars($siteName); ?>"
-    },
-    "dateModified": "<?php echo date('c'); ?>"
-  }
-  </script>
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "<?php echo htmlspecialchars($seoTitle); ?>",
+        "description": "<?php echo htmlspecialchars($seoDescription); ?>",
+        "url": "<?php echo htmlspecialchars((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']); ?>",
+        "publisher": {
+        "@type": "Organization",
+        "name": "<?php echo htmlspecialchars($siteName); ?>"
+        },
+        "dateModified": "<?php echo date('c'); ?>"
+    }
+    </script>
 
     <!-- ==============================
          Chart.js library for uptime graphs
          Will be used to render dynamic line charts for each monitored site
     ============================== -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js?v=<?php echo date('YW'); ?>"></script>
 
     <!-- ==============================
          Stylesheet for page styling
          Basic CSS for layout, colors, fonts, and responsiveness
     ============================== -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=<?php echo date('Ymd'); ?>"/>
 </head>
 
 
@@ -391,8 +400,9 @@ $seoTitle = sprintf($seoTitleTemplate, $overallStatus);
     <footer>
         <div class="footer-left">
             <span>Last updated:
-                <?php echo $currentDateTime; ?>. Powered by <a href="https://weborbiton.click">WebOrbiton Status</a>
-                Status.
+                <?php echo $currentDateTime; ?>.
+                <!-- Info below can be removed by developers if they don't want to show it -->
+                Powered by <a href="https://weborbiton.click">WebOrbiton</a>.
             </span>
         </div>
     </footer>

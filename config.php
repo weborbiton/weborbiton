@@ -32,5 +32,8 @@ incident alerts, and historical trends to ensure full operational awareness.";
 
 // Period used to calculate uptime, downtime, and incidents.
 // Can be used to determine which entries to consider for historical metrics.
-$monitoringPeriod = "3 hours"; 
+$monitoringPeriod = "3 hours";
+
+// Interval between checks
+$checkRate = "2 minutes";
 ?>
